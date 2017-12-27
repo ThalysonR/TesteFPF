@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar Produto</title>
+    <style>
+        html, body, p {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: left;
+            height: 100vh;
+        }
+        p {
+            margin-left: 4rem;
+            font-size: 2rem;
+            color: black;
+        }
+        .link {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<h2>ID: {{.Id}} <br /> Descrição: {{.Descricao}}<br /> Data de Compra: {{.Dia}}/{{.Mes}}/{{.Ano}}<br /> {{.Imagem}}<br /> Origem: {{.Origem}}<br /> Categoria: {{.Categoria}}<br /> Preço: R${{.Preco}} - U${{printf "%.2f" (dollar .Preco)}}</h2>
+<p class="link"><a href="/produtos">Todos os Produtos</a></p>
+
+</body>
+</html>

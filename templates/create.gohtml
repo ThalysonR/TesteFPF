@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Produto</title>
+    <style>
+        html, body {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+
+        body, form {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            width: 60vw;
+            font-size: 5rem;
+            color: blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Criar um novo livro</h1>
+<form method="post" action="/produtos/criar/processo">
+    <input type="text" name="descricao" placeholder="descricao" required autofocus>
+    <input type="text" name="dia" placeholder="dia da compra" required maxlength="2">
+    <input type="text" name="mes" placeholder="mês da compra" required maxlength="2">
+    <input type="text" name="ano" placeholder="ano da compra" required maxlength="4">
+    <input type="text" name="imagem" placeholder="imagem" required>
+    <input type="text" name="preco" placeholder="preço" required>
+    <input type="radio" name="origem" value="Nacional" id="opcNacional" checked>
+    <label for="opcNacional">Nacional</label>
+    <input type="radio" name="origem" value="Importado" id="opcImp" />
+    <label for="opcImp">Importado</label>
+    <input type="text" name="categoria" placeholder="categoria" required>
+    <input type="submit">
+</form>
+
+</body>
+</html>
